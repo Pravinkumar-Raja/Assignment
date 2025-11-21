@@ -60,7 +60,14 @@ public class CollectionExample {
 	            System.out.println("Roll No " + search1 + " not found.");
 	        }
 	        
-	        
+	        String[] names1 = {"John", "Alex", "Sam"};
+	        Arrays.sort(names1); 
+	        for(int i=0;i<names1.length;i++)
+	        {
+	        	System.out.println(names1[i]);
+	        }
+	        // Descending
+
 	        
 //	        // both key and value
 //	        for(Map.Entry<Integer,String> e1: map.entrySet())
@@ -81,4 +88,5 @@ public class CollectionExample {
 	    }
 	    
 	}
+
 
