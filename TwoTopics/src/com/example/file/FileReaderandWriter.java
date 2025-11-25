@@ -3,8 +3,26 @@ import java.io.*;
 import java.util.Scanner;
 
 public class FileReaderandWriter {
-
-	    public static void main(String[] args) {
+public static String fileData;
+public static String[] words;
+	public long noof() throws IOException
+	{
+		long len=0;
+		 try {
+				BufferedReader reader=new BufferedReader(new FileReader("C:\\Users\\302803\\Desktop\\B.txt"));
+				while((fileData=reader.readLine())!=null)
+				{
+					fileData=fileData.trim();
+					words=fileData.split("\\s+");
+					len+=words.length;
+				}
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		 return len;
+	}
+	    public static void main(String[] args) throws IOException {
 	        Scanner sc = new Scanner(System.in);
 
 	        try {
@@ -35,6 +53,10 @@ public class FileReaderandWriter {
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	        }
+	       FileReaderandWriter frw=new FileReaderandWriter();
+	       long no=frw.noof();
+	       System.out.println();
+	       System.out.println(no);
 	       
 	        
 	       
